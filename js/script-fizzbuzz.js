@@ -3,6 +3,9 @@
 //DICHIARAZIONE VARIABILE BOTTONE CHE AVVIA LA GENERAZIONE DEI 100 NUMERI
 const button_start = document.getElementById("button_start");
 
+//DICHIARAZIONE VARIABILE CONTAINER DELLA STRINGA DI AVVIO DEL PROGRAMMA
+const container_start = document.getElementById("container_start");
+
 
 //METODO CHE GENERA I 100 NUMERI E CONTROLLA LA STAMPA
 button_start.addEventListener("click", function () {
@@ -24,5 +27,18 @@ button_start.addEventListener("click", function () {
         else
             console.log("NUMERO --> " + i);
     }
-
 });
+
+
+//METODO CHE GENERA LA STRINGA DI AVVIO DELLA GENERAZIONE DEI NUMERI IN CONSOLE
+button_start.addEventListener("click", function () {
+
+    //CREAZIONE DELL'ELEMENTO <p>
+    const stringa_start = document.createElement("p");
+    stringa_start.innerHTML = "HAI AVVIATO LA GENERAZIONE DEI NUMERI, CONTROLLA IN CONSOLE!!!";
+
+    //INSERISCO L'ELEMENTO <p> DENTRO AL SUO CONTAINER HTML
+    container_start.append(stringa_start);
+});
+
+
